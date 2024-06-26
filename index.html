@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detector de Traducciones</title>
+    <!-- Estilos opcionales aquí -->
+</head>
+<body>
+  <div>
+    <h2>Ingresa las traducciones:</h2>
+    <textarea id="translationsInput" rows="20" cols="250"></textarea>
+    <button id="processTranslationsButton">Procesar Traducciones</button>
+    <!-- Botón para generar y mostrar el JSON de salida -->
+    <button id="generateOutputButton">Generar JSON de Salida</button>
+    <!-- Elemento para mostrar el JSON de salida -->
+    <div>
+      <label for="showSpanishSwitch">Mostrar valor en español:</label>
+      <input type="checkbox" id="showSpanishSwitch">
+    </div>
+  </div>
+  
+  <div id="exceptionsContainer">
+    <input type="text" id="exceptionInput" placeholder="Añadir clave de excepción" />
+    <button id="addExceptionButton">Añadir Excepción</button>
+    <ul id="exceptionsList"></ul>
+  </div>
+
+    <div>
+        <h2>KEYS Faltantes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Idioma</th>
+                    <th>Clave Faltante</th>
+                    <th>Valor en Español (opcional)</th>
+                </tr>
+            </thead>
+            <tbody id="missingTranslations"></tbody>
+        </table>
+    </div>
+    <div>
+        <h2>Traducciones Iguales al Español</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Idioma</th>
+                    <th>Clave</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody id="sameAsSpanishTranslations"></tbody>
+        </table>
+    </div>
+    <h1>JSON de salida</h1>
+    <pre id="outputJSON"></pre>
+    
+    <script type="module" src="main.js"></script> <!-- Asegúrate de que la ruta al archivo JS es correcta -->
+</body>
+</html>
